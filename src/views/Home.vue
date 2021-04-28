@@ -1,17 +1,46 @@
 <template>
-  <div>
-    <p class="text-yellow-500 text-xl">TEMP : {{ temp }}</p>
-    <p class="text-yellow-500 text-xl">HUMID : {{ humid }}</p>
-    <p class="text-yellow-500 text-xl">LIGHT : {{ light }}</p>
-    <p class="text-yellow-500 text-xl">RAIN : {{ rain }}</p>
+  <div class="h-screen w-full bg-blue-50">
+    <div class="h-full w-full flex">
+      <div
+        :style="{ width: '33rem' }"
+        class="h-full bg-gradient-to-r from-blue-200 to-blue-300 flex flex-col items-center pt-10"
+      >
+        <p class="text-2xl text-gray-50 font-bold">
+          Weathering With PSU
+        </p>
+        <div class="mt-2.5 flex">
+          <p class="text-xl text-gray-50 mb-3 flex justify-center items-center">
+            <locIcon class="h-7 mr-2" />
+            PSU Phuket Station
+          </p>
+        </div>
+        <div class="mt-10">
+          <p class="text-2xl font-light text-gray-50 text-right mb-3">
+            <span>tempreture</span>
+          </p>
+          <p class="text-9xl font-light text-gray-50 animate-pulse">
+            24°c
+          </p>
+        </div>
+        <div class="mt-10">
+          <p class="text-2xl font-light text-gray-50">
+            humid : <span class="animate-pulse">100%</span> | Raining :
+            <span class="animate-pulse">Yes</span>
+          </p>
+        </div>
+      </div>
+      <div class="h-full w-full bg-gray-50 hidden sm:block"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import io from "socket.io-client";
+import locIcon from "../components/locIcon";
 
 export default {
   name: "Home",
+  components: { locIcon },
   data() {
     return {
       socket: {},
@@ -40,3 +69,10 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+</style>
