@@ -15,7 +15,7 @@
         </div>
         <div class="mt-10">
           <p class="text-2xl font-light text-gray-50 text-right mb-3">
-            <span>tempreture</span>
+            <span>temperature</span>
           </p>
           <p class="text-9xl font-light text-gray-50 animate-pulse">
             {{ Math.round(temp) }}°c
