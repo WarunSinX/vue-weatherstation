@@ -19,13 +19,13 @@
             <span>tempreture</span>
           </p>
           <p class="text-9xl font-light text-gray-50 animate-pulse">
-            24°c
+            {{ temp }}°c
           </p>
         </div>
         <div class="mt-10">
           <p class="text-2xl font-light text-gray-50">
-            humid : <span class="animate-pulse">100%</span> | Raining :
-            <span class="animate-pulse">Yes</span>
+            humid : <span class="animate-pulse">{{ humid }}%</span> | Raining :
+            <span class="animate-pulse">{{ rain ? "Yes" : "No" }}</span>
           </p>
         </div>
         <div
