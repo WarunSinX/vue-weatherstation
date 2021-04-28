@@ -1,9 +1,9 @@
 <template>
-  <div class="h-screen w-full bg-blue-50">
+  <div class="sm:h-screen w-full bg-blue-50">
     <div class="h-full w-full flex">
       <div
         :style="{ width: '50rem' }"
-        class="h-full bg-gradient-to-r from-blue-200 to-blue-300 flex flex-col items-center pt-10"
+        class="h-full bg-gradient-to-r from-blue-200 to-blue-300 flex flex-col items-center py-10"
       >
         <p class="text-2xl text-gray-50 font-bold">
           Weathering With PSU
@@ -35,7 +35,9 @@
           <img src="../assets/lineCode.png" class="opacity-70" />
         </div>
       </div>
-      <div class="h-full w-full bg-gray-50 hidden sm:block"></div>
+      <div class="h-full w-full bg-gray-50 hidden sm:block">
+        <dashboard />
+      </div>
     </div>
   </div>
 </template>
@@ -43,10 +45,11 @@
 <script>
 import io from "socket.io-client";
 import locIcon from "../components/locIcon";
+import Dashboard from "../components/Dashboard.vue";
 
 export default {
   name: "Home",
-  components: { locIcon },
+  components: { locIcon, Dashboard },
   data() {
     return {
       socket: {},
