@@ -21,13 +21,19 @@
           </svg>
           <p class="text-2xl font-light text-gray-600">
             Light Status :
-            <span class="animate-pulse">{{ light ? "On" : "Off" }}</span>
+            <span
+              class="font-medium"
+              :class="light ? 'text-green-400' : 'text-red-400'"
+              >{{ light ? "On" : "Off" }}</span
+            >
           </p>
         </div>
         <div
           class="p-5 flex-grow ml-7 h-72 bg-gray-50 rounded-lg flex flex-col justify-start items-center pt-10 border-4 border-dashed border-gray-500 pb-12 space-y-5"
         >
-          <p class="text-2xl font-light text-gray-600">Group Members</p>
+          <p class="text-2xl text-gray-600 font-medium underline">
+            Group Members
+          </p>
           <p class="text-2xl font-light text-gray-600">Wongsakorn 6230613016</p>
           <p class="text-2xl font-light text-gray-600">Warun S. 6230613019</p>
           <p class="text-2xl font-light text-gray-600">Rawich 6230613036</p>

@@ -18,12 +18,14 @@
             <span>tempreture</span>
           </p>
           <p class="text-9xl font-light text-gray-50 animate-pulse">
-            {{ temp }}°c
+            {{ Math.round(temp) }}°c
           </p>
         </div>
         <div class="mt-10">
           <p class="text-2xl font-light text-gray-50">
-            humid : <span class="animate-pulse">{{ humid }}%</span> | Raining :
+            humid :
+            <span class="animate-pulse">{{ Math.round(humid) }}%</span> |
+            Raining :
             <span class="animate-pulse">{{ rain ? "Yes" : "No" }}</span>
           </p>
         </div>
