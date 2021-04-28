@@ -26,7 +26,7 @@
             humid :
             <span class="animate-pulse">{{ Math.round(humid) }}%</span> |
             Raining :
-            <span class="animate-pulse">{{ rain === 1 ? "Yes" : "No" }}</span>
+            <span class="animate-pulse">{{ rain === "1" ? "Yes" : "No" }}</span>
           </p>
         </div>
         <div

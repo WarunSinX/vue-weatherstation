@@ -23,8 +23,8 @@
             Light Status :
             <span
               class="font-medium"
-              :class="light === 1 ? 'text-green-400' : 'text-red-400'"
-              >{{ light === 1 ? "On" : "Off" }}</span
+              :class="light === '1' ? 'text-green-400' : 'text-red-400'"
+              >{{ light === "1" ? "On" : "Off" }}</span
             >
           </p>
         </div>
