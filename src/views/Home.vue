@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:h-screen w-full bg-blue-50">
+  <div class="sm:h-screen w-full">
     <div class="h-full w-full flex">
       <div
         class="h-full bg-gradient-to-r from-blue-200 to-blue-300 flex flex-col items-center py-10 w-full xl:w-3/5"
@@ -26,7 +26,7 @@
             humid :
             <span class="animate-pulse">{{ Math.round(humid) }}%</span> |
             Raining :
-            <span class="animate-pulse">{{ rain ? "Yes" : "No" }}</span>
+            <span class="animate-pulse">{{ rain === 1 ? "Yes" : "No" }}</span>
           </p>
         </div>
         <div
