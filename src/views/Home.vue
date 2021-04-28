@@ -2,7 +2,7 @@
   <div class="h-screen w-full bg-blue-50">
     <div class="h-full w-full flex">
       <div
-        :style="{ width: '33rem' }"
+        :style="{ width: '50rem' }"
         class="h-full bg-gradient-to-r from-blue-200 to-blue-300 flex flex-col items-center pt-10"
       >
         <p class="text-2xl text-gray-50 font-bold">
@@ -28,6 +28,12 @@
             <span class="animate-pulse">Yes</span>
           </p>
         </div>
+        <div
+          class="mt-16 w-44 h-44 bg-white rounded-lg p-2 cursor-pointer shadow-sm"
+          @click="clickLine"
+        >
+          <img src="../assets/lineCode.png" class="opacity-70" />
+        </div>
       </div>
       <div class="h-full w-full bg-gray-50 hidden sm:block"></div>
     </div>
@@ -49,6 +55,14 @@ export default {
       light: 0,
       rain: 0,
     };
+  },
+  methods: {
+    clickLine: function() {
+      window.open(
+        "https://liff.line.me/1645278921-kWRPP32q?accountId=273wnizr&openerPlatform=native&openerKey=talkroom%3Aheader#mst_challenge=29Lgv7AecXtMm6yKDEBoyJIxhroACK8QdohwcqnErJs",
+        "_blank"
+      );
+    },
   },
   created() {
     this.socket = io("https://wwp-iot-server.herokuapp.com");
